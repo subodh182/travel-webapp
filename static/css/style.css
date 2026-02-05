@@ -317,3 +317,60 @@
     padding-right: 0;
     border-right: none;
 }
+
+/* Utilities moved from inline styles in templates/index.html */
+.spinner-lg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.topbar-45 {
+    height: 45px;
+}
+
+.search-btn-offset {
+    margin-top: 7px;
+}
+
+.min-h-400 {
+    min-height: 400px;
+}
+
+.img-object-cover {
+    object-fit: cover;
+}
+
+.icon-box-50 {
+    width: 50px;
+    height: 50px;
+}
+
+.map-iframe {
+    min-height: 300px;
+    border: 0;
+}
+
+.textarea-100 {
+    height: 100px;
+}
+
+.max-w-400 {
+    max-width: 400px;
+}
+
+.destination-min-height {
+    min-height: 350px;
+}
+
+/* Accessibility utility */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
