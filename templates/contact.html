@@ -46,7 +46,7 @@
             <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center topbar-45">
                     <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+91 9865647826</small>
                     <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                     <a href="destination.html" class="nav-item nav-link">Destination</a>
                     <a href="contact.html" class="nav-item nav-link active">Contact</a>
                 </div>
-                <a href="https://htmlcodex.com/downloading/?item=2111" class="btn btn-primary rounded-pill py-2 px-4">Buy Pro Version</a>
+                <a href="https://www.fluxsites.me/pricing" class="btn btn-primary rounded-pill py-2 px-4">Buy Pro Version</a>
             </div>
         </nav>
 
@@ -117,14 +117,14 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h5>Get In Touch</h5>
-                    <h6 class="mb-4">Receive messages instantly with our PHP and Ajax contact form - available in the <a href="https://htmlcodex.com/downloading/?item=2111">Pro Version</a> only.</h6>
+                    <h6 class="mb-4">Connect with us today and discover your next unforgettable travel adventure. Our dedicated team is available <a href="https://www.booking.com">24/7</a> to assist you with all your travel needs.</h6>
                     <div class="d-flex align-items-center mb-4">
                         <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary icon-box-50">
                             <i class="fa fa-map-marker-alt text-white" aria-hidden="true"></i>
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Office</h5>
-                            <p class="mb-0">123 Street, New York, USA</p>
+                            <p class="mb-0">Booking.com B.V., Herengracht 597, Amsterdam, Netherlands</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center mb-4">
@@ -133,7 +133,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Mobile</h5>
-                            <p class="mb-0">+012 345 67890</p>
+                            <p class="mb-0">+91 9658754625</p>
                         </div>
                     </div>
                     <div class="d-flex align-items-center">
@@ -142,7 +142,7 @@
                         </div>
                         <div class="ms-3">
                             <h5 class="text-primary">Email</h5>
-                            <p class="mb-0">info@example.com</p>
+                            <p class="mb-0">info@booking.com</p>
                         </div>
                     </div>
                 </div>
@@ -154,29 +154,29 @@
                         tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    <form method="POST" action="/submit_contact">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control textarea-100" placeholder="Leave a message here" id="message"></textarea>
+                                    <textarea class="form-control textarea-100" name="message" id="message" placeholder="Leave a message here" required></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>
