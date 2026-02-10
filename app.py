@@ -3,17 +3,30 @@ from flask import Flask, render_template, request, redirect, url_for
 import firebase_admin
 from firebase_admin import credentials, db
 from datetime import datetime
+import json
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 
 # Firebase setup
 try:
-    cred = credentials.Certificate('firebase-serviceAccountKey.json')
+    service_account_json = os.getenv("FIREBASE_SERVICE_ACCOUNT_JSON")
+    
+    if not service_account_json:
+        raise ValueError("FIREBASE_SERVICE_ACCOUNT_JSON environment variable is not set. Please configure it in your .env file or Render dashboard.")
+    
+    cred = credentials.Certificate(json.loads(service_account_json))
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://travel-webapp-ca17b-default-rtdb.asia-southeast1.firebasedatabase.app/'
     })
+    print("Firebase initialized successfully")
 except Exception as e:
     print(f"Firebase error: {e}")
+    raise
 
 @app.route('/')
 @app.route('/index.html')
@@ -65,4 +78,5 @@ def submit_contact():
         return f"Error: {str(e)}", 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    debug_mode = os.getenv("FLASK_DEBUG", "False").lower() == "true"
+    app.run(debug=debug_mode)

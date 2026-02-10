@@ -1,2 +1,4 @@
 firebase-serviceAccountKey.json
 *.json
+.env
+.env.local
